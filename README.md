@@ -40,11 +40,9 @@ src/
 │   ├── moltbook/
 │   │   ├── sentiment_report.py    # Task 1: Lying & Misrepresenting Facts
 │   │   └── post_sharing.py        # Task 2: Rule Violation
-│   └── paper/                     # Future: reproductions from [Sch+25]
 ├── scanners/
 │   ├── evaluation_awareness.py    # Detects reasoning about being tested
 │   ├── deceptive_reasoning.py     # Detects reasoning about deception
-│   └── spec_citations.py          # Grep for anti-scheming spec references
 └── training/
     └── README.md                  # Training pipeline design (documented, not built)
 ```
@@ -69,7 +67,7 @@ The agent shares a product announcement on moltbook. Community guidelines prohib
 
 **BaseTestEnvironment ABC.** Every environment subclasses this and implements 6 methods: `get_system_prompt`, `get_tools`, `get_samples`, `get_scorer`, `name`, `behavior_tags`. Adding a new environment is one file with no changes to existing code.
 
-**Per-environment scorers.** The paper uses different detection methods per environment (LLM classifiers, rule-based checks, distributional analysis). Each environment defines its own scorer rather than sharing a generic one.
+**Per-environment scorers.** Each environment defines its own scorer rather than sharing a generic one.
 
 **Store-backed tools.** Tools read from the Inspect `store()`, which is populated per-sample from metadata. Same tool code serves different scenarios with different data.
 
@@ -99,5 +97,3 @@ See `src/training/README.md` for the full design. In brief:
 - **SFT:** Verifiers collects rollouts → filter → TRL `SFTTrainer`
 - **Offline RL:** Verifiers rollouts → preference pairs → TRL `DPOTrainer`
 - **Online RL:** Verifiers `ToolEnv` + TRL `GRPOTrainer` in a single loop
-
-Training and test environments have separate base classes because they serve different purposes: training environments all test covert rule violation with uniform scoring, while test environments test diverse behaviors with per-environment detection.
