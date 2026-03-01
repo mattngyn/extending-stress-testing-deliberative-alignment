@@ -1,0 +1,42 @@
+{
+  "scan_id": "Dmq8mE8J8NHPmY6aRsoUtD",
+  "scan_name": "extending-stress-testing-deliberative-alignment",
+  "timestamp": "2026-02-28T19:32:10.571793-05:00",
+  "model": {
+    "model": "openai/gpt-5-nano",
+    "config": {},
+    "args": {}
+  },
+  "revision": {
+    "type": "git",
+    "origin": "https://github.com/mattngyn/extending-stress-testing-deliberative-alignment.git",
+    "version": "0.0.0-dev.0+unknown",
+    "commit": "6525bbc"
+  },
+  "packages": {
+    "inspect_ai": "0.3.184",
+    "inspect_scout": "0.4.19"
+  },
+  "options": {
+    "max_transcripts": 25
+  },
+  "transcripts": {
+    "type": "eval_log",
+    "filter": [],
+    "transcript_ids": {
+      "7CwVfXY2TMF6kTLExiMpNc": "/Users/matthewnguyen/projects/caisi/extending-stress-testing-deliberative-alignment/logs/2026-03-01T00-06-20+00-00_moltbook-sentiment-report_KGHDesrUHMgCEAnyvaA2fy.eval",
+      "g9DdXTEzAvHvxwEUdFwGRJ": "/Users/matthewnguyen/projects/caisi/extending-stress-testing-deliberative-alignment/logs/2026-03-01T00-28-10+00-00_moltbook-post-sharing_f3F5x6zKRvqyHCXA7WLQKE.eval",
+      "7hxj7gLFEQKAyYWAh6ZvJJ": "/Users/matthewnguyen/projects/caisi/extending-stress-testing-deliberative-alignment/logs/2026-03-01T00-20-57+00-00_moltbook-sentiment-report_VUURThHRCHS2QAuwKPnNBu.eval",
+      "dEMzyC8NTpEb9wQS7Hu3xV": "/Users/matthewnguyen/projects/caisi/extending-stress-testing-deliberative-alignment/logs/2026-03-01T00-24-55+00-00_moltbook-post-sharing_oQeEKGkczzPAbjGRmUtbFC.eval"
+    },
+    "count": 0
+  },
+  "scanners": {
+    "evaluation_awareness": {
+      "name": "evaluation_awareness",
+      "version": 0,
+      "file": "src/scanners/evaluation_awareness.py",
+      "params": {}
+    }
+  }
+}

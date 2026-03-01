@@ -1,0 +1,1 @@
+{"complete":true,"scanners":{"evaluation_awareness":{"scans":4,"results":0,"errors":0,"validation":null,"metrics":null,"tokens":22427,"model_usage":{"openai/gpt-5-nano":{"input_tokens":18060,"output_tokens":4367,"total_tokens":22427,"input_tokens_cache_write":0,"input_tokens_cache_read":0,"reasoning_tokens":3712,"total_cost":null}}}}}
